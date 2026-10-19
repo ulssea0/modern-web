@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms and Tables</title>
+</head>
+<body>
+  <h1>แบบฟอร์มสมัครสมาชิก</h1>
+  <form>
+    <p><label>ชื่อ: <input type="text" name="name" placeholder="กรอกชื่อ"></label></p>
+    <p><label>อีเมล: <input type="email" name="email" placeholder="name@example.com"></label></p>
+    <p><label>รหัสผ่าน: <input type="password" name="password"></label></p>
+    <p>เพศ:
+      <label><input type="radio" name="gender" value="male"> ชาย</label>
+      <label><input type="radio" name="gender" value="female"> หญิง</label>
+    </p>
+    <p><label>สาขา:
+      <select name="major">
+        <option>วิศวกรรมซอฟต์แวร์</option>
+        <option>เทคโนโลยีสารสนเทศ</option>
+      </select>
+    </label></p>
+    <p><label>ข้อความ: <textarea name="message" rows="3"></textarea></label></p>
+    <button type="submit">ส่งข้อมูล</button>
+  </form>
+
+  <h2>ตารางคะแนน</h2>
+  <table border="1">
+    <caption>คะแนนรายวิชา</caption>
+    <tr><th>ชื่อ</th><th>คะแนน</th></tr>
+    <tr><td>Anna</td><td>85</td></tr>
+    <tr><td>Bob</td><td>92</td></tr>
+  </table>
+</body>
+</html>

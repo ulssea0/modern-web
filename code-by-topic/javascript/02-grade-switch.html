@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Switch</title>
+</head>
+<body>
+    <h1>ตรวจสอบเกรดด้วย Switch</h1>
+    <div id="outputBox"></div>
+
+    <script>
+        const score = Math.floor(Math.random() * 101);
+        let grade;
+
+        if (score >= 80) {
+            grade = "A";
+        } else if (score >= 70) {
+            grade = "B";
+        } else if (score >= 60) {
+            grade = "C";
+        } else if (score >= 50) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        let description;
+        switch (grade) {
+            case "A":
+                description = "ยอดเยี่ยมมาก";
+                break;
+            case "B":
+                description = "ดีมาก รักษามาตรฐานไว้";
+                break;
+            case "C":
+                description = "ผ่านเกณฑ์ระดับหนึ่ง";
+                break;
+            case "D":
+                description = "พอใช้ แต่ควรพัฒนาเพิ่ม";
+                break;
+            default:
+                description = "ต้องลงทะเบียนเรียนใหม่";
+        }
+
+        const result = score >= 50 ? "ผ่าน" : "ไม่ผ่าน";
+        const lines = [
+            `คะแนนที่สุ่มได้: ${score}`,
+            `เกรด: ${grade}`,
+            `ผลสอบ: ${result}`,
+            `คำอธิบาย: ${description}`
+        ];
+
+        document.getElementById("outputBox").innerHTML = lines.join("<br>");
+        lines.forEach(line => console.log(line));
+    </script>
+</body>
+</html>

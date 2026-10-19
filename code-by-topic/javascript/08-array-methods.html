@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods</title>
+</head>
+<body>
+  <h1>forEach(), map(), filter()</h1>
+  <pre id="output"></pre>
+  <script>
+    const products = [
+      { name: "Laptop", price: 30000 },
+      { name: "Phone", price: 15000 },
+      { name: "Tablet", price: 10000 }
+    ];
+
+    const lines = [];
+    products.forEach(product => lines.push(`${product.name}: ${product.price} บาท`));
+
+    const pricesWithVat = products.map(product => product.price * 1.07);
+    const expensiveProducts = products.filter(product => product.price > 12000);
+
+    lines.push(`ราคาเมื่อรวม VAT: ${pricesWithVat.join(", ")}`);
+    lines.push(`สินค้าราคาเกิน 12,000 บาท: ${expensiveProducts.map(product => product.name).join(", ")}`);
+    document.getElementById("output").textContent = lines.join("\n");
+  </script>
+</body>
+</html>

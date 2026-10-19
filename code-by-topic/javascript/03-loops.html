@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Practice</title>
+</head>
+<body>
+    <h1>ฝึกใช้ Loop</h1>
+    <div id="output"></div>
+
+    <script>
+        const maxNumber = 20;
+        const lines = [];
+
+        lines.push(`เลข 0 ถึง ${maxNumber}`);
+        for (let number = 0; number <= maxNumber; number++) {
+            const type = number % 2 === 0 ? "คู่" : "คี่";
+            lines.push(`${number} (${type})`);
+        }
+
+        lines.push("นับทีละ 2");
+        for (let number = 0; number <= maxNumber; number += 2) {
+            lines.push(String(number));
+        }
+
+        lines.push("นับถอยหลังจาก 10 ถึง 0");
+        for (let number = 10; number >= 0; number--) {
+            lines.push(String(number));
+        }
+
+        document.getElementById("output").innerHTML = lines.join("<br>");
+        lines.forEach(line => console.log(line));
+    </script>
+</body>
+</html>

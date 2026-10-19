@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position</title>
+  <style>
+    body { min-height: 900px; padding: 20px; font-family: Arial, sans-serif; }
+    .box { padding: 16px; margin: 12px 0; color: white; }
+    .static { position: static; background: #2563eb; }
+    .relative { position: relative; left: 30px; background: #f97316; }
+    .parent { position: relative; height: 180px; background: #e5e7eb; }
+    .absolute { position: absolute; top: 20px; right: 20px; background: #dc2626; }
+    .fixed { position: fixed; right: 20px; bottom: 20px; background: #16a34a; }
+  </style>
+</head>
+<body>
+  <div class="box static">position: static</div>
+  <div class="box relative">position: relative; left: 30px</div>
+  <div class="parent">Parent (position: relative)<div class="box absolute">position: absolute</div></div>
+  <div class="box fixed">position: fixed</div>
+</body>
+</html>
