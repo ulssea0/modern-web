@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Check</title>
+</head>
+<body>
+    <h1>ตรวจสอบเกรด</h1>
+    <div id="output"></div>
+
+    <script>
+        // ลองเปลี่ยน score เป็น 45, 62, 79 หรือ 88
+        const score = 88;
+        let grade;
+
+        if (score >= 80) {
+            grade = "A";
+        } else if (score >= 70) {
+            grade = "B";
+        } else if (score >= 60) {
+            grade = "C";
+        } else if (score >= 50) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        const result = score >= 50 ? "ผ่าน" : "ไม่ผ่าน";
+        const message = `คะแนน: ${score}<br>เกรด ${grade}<br>ผลสอบ: ${result}`;
+
+        document.getElementById("output").innerHTML = message;
+        console.log(`คะแนน: ${score}`);
+        console.log(`เกรด ${grade}`);
+        console.log(`ผลสอบ: ${result}`);
+    </script>
+</body>
+</html>
